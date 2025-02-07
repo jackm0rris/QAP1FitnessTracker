@@ -36,29 +36,29 @@ public class FitnessTracker {
     }
 
     public void printWorkouts() {
-        System.out.println("Workouts:");
+        System.out.println("Workout Log:");
         for (Workout w : workouts) {
-            System.out.println("- " + w.getWorkoutType() + " for " + w.getDuration() + " min, burned " + w.getCaloriesBurned() + " cal");
+            System.out.println(w.getWorkoutType() + " for " + w.getDuration() + " min - burned " + w.getCaloriesBurned() + " cals");
         }
     }
 
     public static void main(String[] args) {
         FitnessTracker tracker = new FitnessTracker();
 
-        tracker.logWorkout("Running", 30);
-        tracker.logWorkout("Cycling", 45);
-        tracker.logWorkout("Lifting", 60);
+        tracker.logWorkout("Weight Lifting", 15);
+        tracker.logWorkout("Hockey", 30);
+        tracker.logWorkout("Running", 45);
 
-        tracker.setFitnessGoal(1000);
+        tracker.setFitnessGoal(700);
 
         tracker.printWorkouts();
-        System.out.println("Total Calories Burned: " + tracker.getTotalCaloriesBurned());
-        System.out.println("Fitness Goal: " + tracker.getFitnessGoal());
+        System.out.println("Total Cals Burned: " + tracker.getTotalCaloriesBurned());
+        System.out.println("Goal: " + tracker.getFitnessGoal());
 
         if (tracker.getTotalCaloriesBurned() >= tracker.getFitnessGoal()) {
-            System.out.println("Nice! You reached your goal!");
+            System.out.println("You reached your goal!");
         } else {
-            System.out.println("Keep going! You need " + (tracker.getFitnessGoal() - tracker.getTotalCaloriesBurned()) + " more calories.");
+            System.out.println("You need " + (tracker.getFitnessGoal() - tracker.getTotalCaloriesBurned()) + " more calories to reach your goal!.");
         }
     }
 }

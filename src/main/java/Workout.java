@@ -1,7 +1,7 @@
 public class Workout {
     private String type; // type of workout
     private int time; // in minutes
-    private static final int CALORIES_RATE = 5; // calories burned per minute (not exact)
+    private static final int CALORIES_RATE = 5; // calories burned per minute
 
     public Workout(String type, int time) {
         this.type = type;
