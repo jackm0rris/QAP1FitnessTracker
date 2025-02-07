@@ -1,0 +1,38 @@
+1. Clean Code Practices
+The project follows clean code principles:
+
+Meaningful Names: Variables like workouts and fitnessGoal are clear and descriptive, making it easy to understand their purpose.
+
+Methods: Methods such as logWorkout(), getTotalCaloriesBurned(), and setFitnessGoal() are short and clearly describe their functionality.
+
+Single Responsibility Principle: The FitnessTracker class is focused solely on managing workout-related operations, such as logging workouts,
+calculating calories burned, and tracking fitness goals, adhering to the Single Responsibility Principle.
+
+2. Project Explanation
+What it does:
+The project is a fitness tracker app that allows users to log their workouts, set fitness goals, and track the total calories burned.
+
+How it works:
+
+The FitnessTracker class manages a list of workouts and calculate total calories burned, set fitness goals,
+and display workout details.
+
+The Workout class represents a single workout, storing its type, duration, and calculating the calories burned based on a rate per minute.
+
+The ProgressTracker class provides additional functionality for calculating total calories burned from a list of workouts.
+
+Test Cases:
+
+testLogWorkout: Verifies that a workout is correctly logged by checking the size of the workouts list after adding a workout.
+
+testCalculateTotalCaloriesBurned: Ensures that the total calories burned are calculated correctly by logging two workouts and checking the total.
+
+testSetFitnessGoal: Confirms that the fitness goal is set correctly by setting a goal and then retrieving it.
+
+3. Dependencies
+The project uses JUnit Jupiter from the Maven Central Repository for unit testing. The pom.xml file configures the project and includes this dependency.
+
+4. Challenges with GitHub Actions
+I encountered some issues with GitHub Actions. I’m still learning how to configure them properly,
+but with more time and practice, I will get better at getting the actions to pass successfully.
+
